@@ -32,6 +32,9 @@
     <ClCompile Include="Mystggame.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="dataManage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mystggame.rc">
