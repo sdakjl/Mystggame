@@ -4,7 +4,6 @@
 template<typename T>
 struct node
 {
-public:
 	int lastPos;
 	int nextPos;
 	T value;
@@ -20,20 +19,24 @@ public:
 		datas[0].lastPos = 0;
 		datas[0].exist = 1;
 	}
-	void insert(T a) {
+	void insert(T a) {  //向尾部
 		if (freed.empty()) {
 			datas.push_back({ datas[0].lastPos,0,a,1 });
-			datas[datas[0.lastPos]].nextPos = datas.size() - 1;
+			datas[datas[0].lastPos].nextPos = datas.size() - 1;
 			datas[0].lastPos = datas.size() - 1;
 		}
 		else {
-			datas[datas[0.lastPos]].nextPos = fread.top();
-			datas[0].lastPos = datas.size() - 1;
+			datas[datas[0].lastPos].nextPos = freed.top();
+			datas[freed.top()].nextPos = 0;
+			datas[freed.top()].lastPos = datas[0].lastPos;
+			datas[0].lastPos = freed.top();
 			datas[freed.top()].value = a;
 			datas[freed.top()].exist = true;
+			freed.pop();
 		}
 	}
 	void remove(int pos) { //移除节点
+		if (!datas[pos].exist) return;
 		datas[datas[pos].lastPos].nextPos = datas[pos].nextPos;
 		datas[datas[pos].nextPos].lastPos = datas[pos].lastPos;
 		datas[pos].exist = false;
@@ -48,6 +51,9 @@ public:
 		return pos;
 	}
 	T& operator[](int pos) {
-		return datas[pos];
+		return datas[pos].value;
+	}
+	int size() const {
+		return datas.size();
 	}
 };

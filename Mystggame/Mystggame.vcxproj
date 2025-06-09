@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="dataManage.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="gamemain.h" />
+    <ClInclude Include="hitbox.h" />
     <ClInclude Include="Mystggame.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
@@ -135,6 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataManage.cpp" />
+    <ClCompile Include="gamemain.cpp" />
+    <ClCompile Include="hitbox.cpp" />
     <ClCompile Include="Mystggame.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,11 @@
 #include<graphics.h>
 #include<string>
 #include<deque>
+#include<sstream>
 const int bufferSize = 25;
 
 std::deque<std::wstring> Buffer;
-void println(std::wstring str) {
+static inline void println(std::wstring str) {
 	Buffer.push_back(str);
 	while (Buffer.size() > bufferSize) {
 		Buffer.pop_front();
@@ -15,4 +16,12 @@ void println(std::wstring str) {
 		r.top += 15;
 		r.bottom += 15;
 	}
+}
+template<typename T>
+static void printt(T a) {
+	std::wstringstream ws;
+	ws << a;
+	std::wstring str;
+	ws >> str;
+	println(str);
 }

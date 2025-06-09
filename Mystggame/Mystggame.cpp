@@ -18,6 +18,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		println(a);
 		Sleep(100);
 	}
+	println(std::wstring(L"hello,world"));
 	Sleep(5000);			// 延时 5000 毫秒
 	closegraph();			// 关闭图形窗口
 	return 0;
