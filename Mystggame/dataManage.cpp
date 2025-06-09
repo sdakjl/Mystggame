@@ -50,4 +50,5 @@ public:
 	T& operator[](int pos) {
 		return datas[pos];
 	}
+
 };
