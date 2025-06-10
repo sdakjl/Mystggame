@@ -1,11 +1,9 @@
 #pragma once
 #include<vector>
 #include<stack>
-#include"gamemain.h"
+
 #ifndef __dataM__
 #define __dataM__
-
-
 template<typename T>
 struct node
 {

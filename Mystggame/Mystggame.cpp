@@ -5,9 +5,6 @@
 #include "hitbox.h"
 #include "gamemain.h"
 #include "dataManage.h"
-//chain<object> enemyPlanes;//敌机
-//chain<object> enemyBallut;//敌方弹幕
-//chain<object> playerBallut;//自机弹幕
 chain<int> aaa;
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
