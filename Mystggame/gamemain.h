@@ -1,6 +1,9 @@
 #pragma once
 #include "dataManage.h"
 #include "hitbox.h"
+#ifndef  __gamemain__
+#define __gamemain__
+
 class object {
 public:
 	hitbox box;
@@ -12,3 +15,6 @@ public:
 	int time;
 	void action();
 };
+
+
+#endif // ! 

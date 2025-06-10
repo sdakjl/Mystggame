@@ -2,6 +2,10 @@
 #include<string>
 #include<deque>
 #include<sstream>
+#ifndef _temu_
+#define _temu_
+
+
 const int bufferSize = 25;
 
 std::deque<std::wstring> Buffer;
@@ -25,3 +29,4 @@ static void printt(T a) {
 	ws >> str;
 	println(str);
 }
+#endif // !_temu_
