@@ -66,6 +66,15 @@ void game::loopAction() {
 			enemyBallut.remove(p3);
 		}
 	}
-
+	p1 = p2 = p3 = 0;
+	while (playerBallut.next(p1)) {
+		playerBallut[p1].action();
+	}
+	while (enemyBallut.next(p2)) {
+		enemyBallut[p2].action();
+	}
+	while (enemyPlane.next(p3)) {
+		enemyPlane[p3].action();
+	}
 }
 //int playerHealth;
